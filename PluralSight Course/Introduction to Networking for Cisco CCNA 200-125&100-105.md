@@ -5,8 +5,8 @@
 
 ### Network Communication Models
 
-|||
-|---
+| | |
+|---|---|
 |Media|Wires/Radio/Glass|
 |Local|Ethernet|
 |Global|Internet Protocol|
@@ -33,7 +33,7 @@
 
 #### OSI Model vs TCP/IP Model
 |TCP/IP Model |OSI Model |Example|
-|---
+|---|---|---|
 |Network Interface |Physical |Wires/Radio/Glass|
 ||Data Link |Ethernet|
 |Internet |Network|Internet Protocol|
@@ -47,7 +47,7 @@
 
 #### OSI Model
  |||
- |---
+ |---|---|
  |7 |Application|
  |||
  |||
@@ -65,23 +65,23 @@
 TCP Header Exmaple:  
 
 |Source Port |Destination Port |Flags |Seq # |Ack # |Payload|
-|---
+|---|---|---|---|---|---|
 
 #### 3 - Network/Internet Layer
  - **Packet:** A chunk of data with a network layer Header
 
  IP Header Example:
 
- |Source IP Address | Destination IP ADdress |TTL | Other | Segment/Payload|
- |---
+ |Source IP Address | Destination IP Address |TTL | Other | Segment/Payload|
+ |---|---|---|---|---|
 
 #### 2 - Data Link/Network Interface Layer
  - **Frame:** A chunk of data, with a Data Link layer header.
 
- Ethernet Header Example:
+  Ethernet Header Example:  
 
- |Destination MAC Address| Source MAC Address |Layer 3 Protocol |Packet/Payload|
- |---
+|Destination MAC Address| Source MAC Address |Layer 3 Protocol |Packet/Payload|
+|---|---|---|---|
 
 #### 1 - Physical Layer  
  - Converted to bits and then sent across physical medium (RF, copper, fiber, etc)  
@@ -98,7 +98,7 @@ TCP Header Exmaple:
 
 #### How Global Addressing Works
  - In order to communicate to outside networks, IP addresses are assigned.
- - To communicate with an outside network, a packet with the required destination address will be encapsulated in a frame addressed to the router/default gateway. The router will then remove the packet from the fram and encapsulate it in a new frame to pass it along to the next router. This will repeat until it reaches the local network of the destination IP address.
+ - To communicate with an outside network, a packet with the required destination address will be encapsulated in a frame addressed to the router/default gateway. The router will then remove the packet from the frame and encapsulate it in a new frame to pass it along to the next router. This will repeat until it reaches the local network of the destination IP address.
 
 #### IP Networks
  - Subnet mask separates IP addresses into network portion and host portion
