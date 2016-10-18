@@ -4,7 +4,7 @@
 
 # Heading
 ## Heading2
-Heading 1 and 2 have line break built in. _Keep that in mind_
+Heading 1 and 2 have line break built in on GitHub. _Keep that in mind_
 ### Heading3
 #### Heading4
 ##### Heading5
