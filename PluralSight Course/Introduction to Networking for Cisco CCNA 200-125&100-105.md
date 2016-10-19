@@ -1,7 +1,7 @@
 ## Introduction to Network for Cisco CCNA 200-125/100-105
-[Network Communication Models](#Network Communication Models)  
-[Encapsulation](#Encapsulation)  
-[Data Networking And Addressing](#Data Networks and Addressing)  
+[Network Communication Models](#network-communication-models)  
+[Encapsulation](#encapsulation)  
+[Data Networking And Addressing](#data-networks-and-addressing)  
 
 ### Network Communication Models
 
