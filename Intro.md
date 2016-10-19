@@ -1,5 +1,9 @@
 ## My First Markup File
 
+[Heading](#heading)
+[Heading2](#heading2)
+
+
 **Testing** some of the features that I will be using when writing CCENT Notes in the coming weeks.
 
 # Heading
