@@ -1,1 +1,30 @@
-#Network Layer Addressing and Operation for Cisco CCNA 200-125/100-105
+# Network Layer Addressing and Operation for Cisco CCNA 200-125/100-105
+
+[Introduction to Binary](#introduction-to-binary)
+[Introduction to IP Addressing](#introduction-to-ip-addressing)
+[Introduction to Subnetting](#introduction-to-subnetting)
+[Subnetting Examples](#subnetting-examples)
+[Introduction to IPv6](#introduction-to-ipv6)
+[Router Operation](#router-operation)
+[Variable Length Subnet Mask](#variable-length-subnet-mask)
+
+### Introduction to Binary
+#### Binary 101
+ - for each digit position, 2 numbers options available: 0 or 1 - base 2 - binary
+  -differs from base 10 (decimal) where each digit has 10 options, 0 through 10
+
+#### Converting Binary to Decimal
+ |2^8|2^7|2^6|2^5|2^4|2^3|2^2|2^1|2^0|
+ |---|---|---|---|---|---|---|---|---|
+ |256 |128 |64 |32 |16 |8 |4 |2 |1|
+
+ - each digit in a binary number is worth a value of 2^n where n is the position of the number counting from the right and starting from 0.
+ - To convert take the sum of the decimal value of each digit (x*2^n where x is either 0 or 1)
+ - Example 00010110 = 16 + 4 + 2 = 22
+ - Example 2: 01000110 = 64 + 4 + 2 = 70
+ - Example 3: 11100001 = 128 + 64 + 32 + 1= 225
+
+#### Converting Decimal to Binary
+ - Best explained [here](http://www.electronics-tutorials.ws/binary/bin_2.html)
+
+#### 
