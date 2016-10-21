@@ -9,11 +9,11 @@
 [Variable Length Subnet Mask](#variable-length-subnet-mask)
 
 ### Introduction to Binary
-#### Binary 101
+##### Binary 101
  - for each digit position, 2 numbers options available: 0 or 1 - base 2 - binary
   -differs from base 10 (decimal) where each digit has 10 options, 0 through 10
 
-#### Converting Binary to Decimal
+##### Converting Binary to Decimal
  |2^8|2^7|2^6|2^5|2^4|2^3|2^2|2^1|2^0|
  |---|---|---|---|---|---|---|---|---|
  |256 |128 |64 |32 |16 |8 |4 |2 |1|
@@ -24,7 +24,80 @@
  - Example 2: 01000110 = 64 + 4 + 2 = 70
  - Example 3: 11100001 = 128 + 64 + 32 + 1= 225
 
-#### Converting Decimal to Binary
+##### Converting Decimal to Binary
  - Best explained [here](http://www.electronics-tutorials.ws/binary/bin_2.html)
 
-#### 
+### Introduction to IP Addressing
+
+##### What is an IP Address?
+ - four numbers separated by periods that represent an identifier for a device on a network. example 192.168.10.12
+ - separated into two parts, network portion and host portion
+  - network portion represents a group of network objects
+  - host portion identifies an individual network object
+ - Each number is called an octect
+
+##### Classless Addressing
+ - subnet mask is used to identify the network portion from the host portion
+ - a mask is represented by 1s in the bit positons which should be identified as network portion, and zeroes in the portion that is host
+ - Example: __203.0.113__.10 = __11001011.00000000.01110001__.00001010
+  - If the bolded portion is the network portion the subnet mask would be: 11111111.11111111.11111111.00000000 = 255.255.255.0
+ - Classless addressing allows us to freely set the number of bits desired in the network portion
+
+##### Classful Addressing
+ - Pre 1995, only classful addresses existed
+
+|Class |Private IP Range |End |Notes |
+|---|---|---|---|
+|A |0.0.0.0 | 127.255.255.255| First 8 Bits are network portion|
+|B |128.0.0.0 | 191.255.255.255| First 16 bits are network portion|
+|C |192.0.0.0 | 223.255.255.255| First 24 bits are network portion|
+|D |224.0.0.0 | 239.255.255.255| 32 bits are network portion, used for multicast|
+|E |240.0.0.0 | 255.255.255.255| Experimental, not used|
+
+##### Address Types
+ - Network Address
+  - Identifier for a group of devices
+  - Also called the network prefix
+  - All binary 0s in the host portion of the address
+ - Broadcast Address
+  - identifier for all devices on a network
+  - all binary 1s in the host porition of the address
+ - Host Address
+  - identifies unique device on a network
+  - can be anything other than the network address or broadcast address
+
+##### Private and Public Addresses
+
+|Private IP Address Range |End|
+|---|---|
+|10.0.0.0 |10.255.255.255|
+|172.16.0.0 |172.31.255.255|
+|192.168.0.0 |192.168.255.255|
+
+ - Loopback Address: 127.0.0.1 - used for testing that network stack on device is working
+ - Public addresses are just about everything else
+
+### Introduction to Subnetting
+##### Framework for Discussing Subnetting
+ - Instead of writing out a full subnet mask, focus on the number represents; the number of bits in the network portion
+ - So instead of writing a mask, we write '/n' at the end of the IP address where n is the number of bits in the network portion. This is called Classless Inter domain Routing (CIDR)
+  - Example: 192.168.10.0/24
+
+##### Making a Subnet Calculator
+
+|Bits |Networks | Hosts|
+|---|---|---|
+|0|1|-|
+|1|2|-|
+|2|4|2|
+|3|8|6|
+|4|16|14|
+|5|32|30|
+|6|64|62|
+|7|128|126|
+|8|256|254|
+|9|512|510|
+|10|1024|1022|
+
+
+##### Subnetting a Network into smaller networks
